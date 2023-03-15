@@ -33,9 +33,11 @@ a = 1
 b = -3
 c = 1
 
-x1 = (-b + (b ** 2 - 4 * a * c) ** 0.5) / (2 * a) # TODO: write a code to compute the first root of the quadratic equation
-x2 = (-b - (b ** 2 - 4 * a * c) ** 0.5) / (2 * a) # TODO: then do the same for the second root
-# Note: Make sure to remove the ellipsis (...) when you're writing your code
+def mult3(x, y, z):
+    return x * y * z
+
+x1 = div(add(neg(b), sqrt(sub(exp(b, 2), mult3(4, a, c)))), mult(2, a))
+x2 = div(sub(neg(b), sqrt(sub(exp(b, 2), mult3(4, a, c)))), mult(2, a))
 
 print("First root:" + str(x1))
 print("Second root:" + str(x2))
